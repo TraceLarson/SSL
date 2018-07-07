@@ -1,0 +1,20 @@
+<?php
+	$config = array(
+		'defaultController' => 'welcome',
+		'dbname' => 'fruits',
+		'dbpass' => 'root',
+		'dbuser' => 'root',
+		'baseurl' => 'http://127.0.0.1',
+	);
+	define('APPROOT', dirname(dirname(__FILE__)));
+	define('APPNAME', 'MyFramework');
+	
+	$str = $config["baseurl"]."/".$_SERVER['REQUEST_URI'];
+	
+	$urlPathParts = explode('/', ltrim(parse_url($str, PHP_URL_PATH), '/'));
+	
+//	var_dump($urlPathParts);
+	
+	include 'router.php';
+	$route = new Router($urlPathParts, $config);
+?>
