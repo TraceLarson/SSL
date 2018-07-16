@@ -14,14 +14,46 @@ footer{
     text-align: center;
 }
 .content-container{
-    padding: 10% 0 10% 0;
-    display: flex;
-    flex-flow: row;
-    justify-content: center;
-    align-content: center;
+    /*padding: 10% 0 10% 0;*/
+    /*display: flex;*/
+    /*flex-flow: row;*/
+    /*justify-content: center;*/
+    /*align-content: center;*/
 }
 
 .progress.active .progress-bar {
     -webkit-transition: none !important;
     transition: none !important;
+}
+
+#aboutCarousel{
+    background-color: transparent;
+    margin-top: 0;
+}
+.jumbotron{
+    padding: 0 15% 0 15%;
+    background: transparent;
+}
+
+.carousel-inner{
+    background: transparent;
+}
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    height: 50px;
+    width: 50px;
+    background-image: none;
+}
+
+.carousel-control-next-icon:after
+{
+    content: '>';
+    font-size: 55px;
+    color: black;
+}
+
+.carousel-control-prev-icon:after {
+    content: '<';
+    font-size: 55px;
+    color: black;
 }

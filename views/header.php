@@ -5,7 +5,6 @@
 <!doctype html>
 <html lang="en">
 <head>
-	<!--	<base href="--><? //echo $config['baseurl'];?><!--">-->
 	<link type="text/css" rel="stylesheet" href="/assets/css/bootstrap.min.css"/>
 	<link type="text/css" rel="stylesheet" href="/assets/css/style.css"/>
 
