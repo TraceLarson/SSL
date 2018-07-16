@@ -1,15 +1,15 @@
 <?php
-	class Welcome extends AppController{
-	
+	class About extends AppController{
+
 //		public function __construct($urlPathParts, $config) {
 //			parent::__construct($urlPathParts, $config);
 //		}
-	public function __construct() {
-		$this->getView("header", array('pagename' => 'welcome'));
-		$this->getMenu();
-		$this->getView("welcome");
-		$this->getView('footer');
-	}
+		public function __construct() {
+			$this->getView("header");
+			$this->getMenu();
+			$this->getView("about");
+			$this->getView('footer');
+		}
 		
 		public function getMenu(){
 			$menu = [
@@ -18,12 +18,12 @@
 				'Contact' => '/Contact'
 			];
 			$data = [
-				'CurrentPage' => 'Welcome',
+				'CurrentPage' => 'About',
 				'Menu' => $menu
 			];
 			
 			$this->getView('navigation', $data);
 		}
-	
+		
 	}
 ?>

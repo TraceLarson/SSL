@@ -5,8 +5,8 @@
 	</button>
 	<div class="collapse navbar-collapse" id="navbarNav">
 		<ul class="navbar-nav">
-			<? foreach ($data as $item => $value): ?>
-			<li class="nav-item active">
+			<? foreach ($data['Menu'] as $item => $value): ?>
+			<li class="nav-item <? if(ltrim($value,'/') == $data['CurrentPage'] ){echo 'active';} ?>">
 				<a class="nav-link" href="<?echo $value?>"><?echo $item;?> <span class="sr-only">(current)</span></a>
 			</li>
 			<? endforeach;?>

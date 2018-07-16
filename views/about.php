@@ -1,5 +1,5 @@
 <div class="content-container d-none">
-	<h2>Hello World</h2>
+	<h2>About Us</h2>
 </div>
 
 <div class="progress">

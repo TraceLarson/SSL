@@ -6,32 +6,8 @@
 <html lang="en">
 <head>
 	<!--	<base href="--><? //echo $config['baseurl'];?><!--">-->
-	<link type="text/css" rel="stylesheet" href="https://bootswatch.com/4/cosmo/bootstrap.min.css"/>
-	<link type="text/css" rel="stylesheet" href="/style/style.css"/>
-	<style>
-		header {
-			background-color: darkgray;
-			padding-bottom: 0;
-			margin: 0;
-			border: 1px solid transparent;
-			color: white;
-		}
-		footer{
-			background-color: darkgray;
-			padding-bottom: 0;
-			margin: 0;
-			border: 1px solid transparent;
-			color: white;
-			text-align: center;
-		}
-		.content-container{
-			padding: 10% 0 10% 0;
-			display: flex;
-			flex-flow: row;
-			justify-content: center;
-			align-content: center;
-		}
-	</style>
+	<link type="text/css" rel="stylesheet" href="/assets/css/bootstrap.min.css"/>
+	<link type="text/css" rel="stylesheet" href="/assets/css/style.css"/>
 
 	<meta charset="UTF-8">
 	<meta name="viewport"
@@ -42,7 +18,7 @@
 </head>
 <body>
 <header>
-	<h1>My Framework</h1>
+	<h1><? echo APPNAME ?></h1>
 </header>
 
 
