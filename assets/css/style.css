@@ -30,6 +30,10 @@ footer{
     background-color: transparent;
     margin-top: 0;
 }
+
+#modal-button-container{
+    margin: 10% 0 10% 0;
+}
 .jumbotron{
     padding: 0 15% 0 15%;
     background: transparent;

@@ -5,7 +5,7 @@
 		<hr class="my-4">
 		<p>This Framework uses Model View Controller and PHP.</p>
 	</div>
-	<div class="d-flex justify-content-around ">
+	<div id="modal-button-container" class="d-flex justify-content-around ">
 		<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modelModal">
 			Model
 		</button>
