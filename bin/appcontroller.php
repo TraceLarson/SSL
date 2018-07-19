@@ -6,15 +6,16 @@
 			
 			$this->urlPathParts = $urlPathParts;
 			
-			
+			// http://127.0.0.1/welcome
 			if ($urlPathParts[0]){
 				include './controllers/'.$urlPathParts[0].".php";
 				
 				$appcon = new $urlPathParts[0]($this);
 				
+				// http://127.0.0.1/welcome/index
 				if (isset($urlPathParts[1])){
 					$appcon->$urlPathParts[1]();
-				}else{
+				}else{ // If there is a default method inside this controller (index)
 					$methodVariable = array($appcon, 'index');
 					
 					if(is_callable($methodVariable, false, $callable_name)){
