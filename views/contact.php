@@ -68,15 +68,19 @@
 		</li>
 	</ul>
 	
-	<div>
+	<div class="ml-5 mr-5">
 		<form>
 			<div class="form-group">
-				<label for="exampleFormControlInput1">Email address</label>
-				<input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+				<label for="email">Email address</label>
+				<input type="email" class="form-control" id="email" name="email" placeholder="name@example.com">
 			</div>
 			<div class="form-group">
-				<label for="exampleFormControlSelect1">Example select</label>
-				<select class="form-control" id="exampleFormControlSelect1">
+				<label for="password">Password</label>
+				<input type="password" class="form-control" id="password" name="password">
+			</div>
+			<div class="form-group">
+				<label for="formSelect">Select</label>
+				<select class="form-control" id="formSelect" name="formSelect">
 					<option>1</option>
 					<option>2</option>
 					<option>3</option>
@@ -84,20 +88,40 @@
 					<option>5</option>
 				</select>
 			</div>
-			<div class="form-group">
-				<label for="exampleFormControlSelect2">Example multiple select</label>
-				<select multiple class="form-control" id="exampleFormControlSelect2">
-					<option>1</option>
-					<option>2</option>
-					<option>3</option>
-					<option>4</option>
-					<option>5</option>
-				</select>
+			<div class="form-check form-check-inline mb-4">
+				<input class="form-check-input" type="checkbox" value="one" id="check1" name="checkBox" checked>
+				<label class="form-check-label" for="check1">
+					Check One
+				</label>
+				<input class="form-check-input" type="checkbox" value="two" id="check2" name="checkBox">
+				<label class="form-check-label" for="check2">
+					Check Two
+				</label>
+				<input class="form-check-input" type="checkbox" value="three" id="check3" name="checkBox">
+				<label class="form-check-label" for="check3">
+					Check Three
+				</label>
+			</div>
+			<br>
+			<div class="form-check form-check-inline mb-4">
+				<input class="form-check-input" type="radio" id="radio1" value="option1" name="radio" checked>
+				<label class="form-check-label mr-2" for="radio1">
+					Radio One
+				</label>
+				<input class="form-check-input" type="radio" id="radio2" value="option2" name="radio" >
+				<label class="form-check-label mr-2" for="radio2">
+					Radio Two
+				</label>
+				<input class="form-check-input" type="radio" id="radio3" value="option3" name="radio" >
+				<label class="form-check-label mr-2" for="radio3">
+					Radio Three
+				</label>
 			</div>
 			<div class="form-group">
-				<label for="exampleFormControlTextarea1">Example textarea</label>
-				<textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+				<label for="textArea">Example textarea</label>
+				<textarea class="form-control" id="textArea" name="textArea" rows="3"></textarea>
 			</div>
+			<input type="button" class="btn btn-dark" name="ajaxSubmit" id="ajaxSubmit"  value="ajax submit">
 		</form>
 	</div>
 	

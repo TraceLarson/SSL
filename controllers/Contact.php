@@ -5,6 +5,10 @@
 //			parent::__construct($urlPathParts, $config);
 //		}
 		public function __construct() {
+		
+		}
+		
+		public function index(){
 			$this->getView("header");
 			$this->getMenu();
 			$this->getView("contact");
@@ -23,6 +27,15 @@
 			];
 			
 			$this->getView('navigation', $data);
+		}
+		
+		public function ajaxPars(){
+//			var_dump($_POST);
+			if($_POST["email"]=="root@root.com"){
+				echo "welcome";
+			}else{
+				echo "bad login";
+			}
 		}
 		
 		public function contactRecv(){
@@ -44,15 +57,6 @@
 				 * }
 				 */
 			$this->getView('footer');
-		}
-		
-		public function ajaxPars(){
-			var_dump($_REQUEST);
-			if($_REQUEST["email"]=="mike@aol.com"){
-				echo "welcome";
-			}else{
-				echo "bad login";
-			}
 		}
 		
 	}
