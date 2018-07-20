@@ -3,21 +3,17 @@ $(document).ready(function () {
     $("#ajaxSubmit").click(function () { // When button is clicked
         $.ajax({ // AJAX will submit the form
             method: "POST", // using the POST method
-            url: "/Contact/ajaxPars", // To THIS TARGET URL
+            url: "/Login/ajaxPars", // To THIS TARGET URL
             data: { // This is the data it will send
-                "email": $("#email").val(),
+                "username": $("#username").val(),
                 "password": $("#password").val(),
-                "select": $("#formSelect").val(),
-                "check": $("input:checkbox[name='checkBox']:checked").val(),
-                "radio": $("input:radio[name='radio']:checked").val(),
-                "message": $("#textArea").val()
             },
             success: function (msg) { // THis is what will be returned.
                 if (msg == "welcome") {
-                    alert("welcome");
-                    window.location.href = "/Contact/contactRecv";
+                    alert("welcome " + $("#username").val() );
+                    window.location.href = "/Welcome";
                 }else{
-
+                    alert('Bad Login');
                 }
             }
         })

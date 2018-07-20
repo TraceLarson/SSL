@@ -36,14 +36,7 @@
 		}
 
 
-//		public function ajaxPars(){
-////			var_dump($_POST);
-//			if($_POST["email"]=="root@root.com"){
-//				echo "welcome";
-//			}else{
-//				echo "bad login";
-//			}
-//		}
+
 		
 		public function receiveForm() {
 			$data = [
@@ -51,20 +44,16 @@
 				'username' => '',
 			];
 			if (filter_var($_POST["email"], FILTER_VALIDATE_EMAIL) ){
-				echo 'email valid'.'<br>';
 				$data['email'] = "is-valid";
 				
 			} else {
-				echo 'email invalid'.'<br>';
 				$data['email'] = "is-invalid";
 				$data['success'] = 'alert-danger';
 				
 			}
 			if(preg_match("/^[A-Za-z][A-Za-z0-9!@#$%^&*]*$/", $_POST['username'])) {
-				echo 'username valid'.'<br>';
 				$data['username'] = "is-valid";
 			} else {
-				echo 'username invalid' . '<br>';
 				$data['username'] = "is-invalid";
 			}
 			
