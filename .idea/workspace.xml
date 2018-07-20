@@ -2,13 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="429d06cf-18dc-43e0-b524-e2cc3819b731" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/views/formConfirmation.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/views/messageForm.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/animations.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/jquery.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/appcontroller.php" beforeDir="false" afterPath="$PROJECT_DIR$/bin/appcontroller.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/js/jquery.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/jquery.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/controllers/Contact.php" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/Contact.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controllers/Welcome.php" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/Welcome.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/contact.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/contact.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/footer.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/footer.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -28,29 +27,41 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="config.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/bin/config.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="437">
-              <caret line="19" column="2" lean-forward="true" selection-start-line="19" selection-start-column="2" selection-end-line="19" selection-end-column="2" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="Contact.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/controllers/Contact.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="551">
-              <caret line="35" column="24" lean-forward="true" selection-start-line="35" selection-start-column="24" selection-end-line="35" selection-end-column="24" />
+            <state relative-caret-position="1034">
+              <caret line="77" column="5" lean-forward="true" selection-start-line="77" selection-start-column="5" selection-end-line="77" selection-end-column="5" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="contact.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="contact.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/views/contact.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45">
-              <caret line="2" column="43" selection-start-line="2" selection-start-column="43" selection-end-line="2" selection-end-column="43" />
+            <state relative-caret-position="115">
+              <caret line="71" lean-forward="true" selection-start-line="71" selection-end-line="71" />
+              <folding>
+                <element signature="n#ul#0;n#div#0;n#!!top" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="formConfirmation.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/views/formConfirmation.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="414">
+              <caret line="18" column="47" selection-start-line="18" selection-start-column="47" selection-end-line="18" selection-end-column="47" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="messageForm.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/views/messageForm.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="38" lean-forward="true" selection-end-column="38" />
             </state>
           </provider>
         </entry>
@@ -100,10 +111,12 @@
         <option value="$PROJECT_DIR$/views/welcome.php" />
         <option value="$PROJECT_DIR$/bin/appcontroller.php" />
         <option value="$PROJECT_DIR$/assets/js/main.js" />
-        <option value="$PROJECT_DIR$/assets/js/jquery.js" />
         <option value="$PROJECT_DIR$/controllers/Welcome.php" />
-        <option value="$PROJECT_DIR$/controllers/Contact.php" />
+        <option value="$PROJECT_DIR$/assets/js/jquery.js" />
         <option value="$PROJECT_DIR$/views/contact.php" />
+        <option value="$PROJECT_DIR$/views/messageForm.php" />
+        <option value="$PROJECT_DIR$/controllers/Contact.php" />
+        <option value="$PROJECT_DIR$/views/formConfirmation.php" />
       </list>
     </option>
   </component>
@@ -218,7 +231,7 @@
       <workItem from="1530919022017" duration="9935000" />
       <workItem from="1531351381347" duration="745000" />
       <workItem from="1531753791839" duration="15046000" />
-      <workItem from="1531881925485" duration="5676000" />
+      <workItem from="1531881925485" duration="20886000" />
     </task>
     <task id="LOCAL-00001" summary="added animated progress bar, controller for about and contact pages, added views for about and contact, added php script to highlight the active page.">
       <created>1531762332345</created>
@@ -241,11 +254,25 @@
       <option name="project" value="LOCAL" />
       <updated>1531787449509</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="made contact list responsive. Added in example form">
+      <created>1531958654137</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1531958654137</updated>
+    </task>
+    <task id="LOCAL-00005" summary="successfully made AJAX call from form.">
+      <created>1531964033144</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1531964033144</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="42088000" />
+    <option name="totallyTimeSpent" value="57298000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1280" y="22" width="1280" height="1373" extended-state="0" />
@@ -282,7 +309,9 @@
     <MESSAGE value="added animated progress bar, controller for about and contact pages, added views for about and contact, added php script to highlight the active page." />
     <MESSAGE value="Implemented Jumbotron and buttons with modal boxes for the Welcome page. Implemented Carousel with jumbotrons inside instead of images on the About page. Implemented a boostrap list with buttons that have functioning popovers for the contact information on the Contact page." />
     <MESSAGE value="fixed margins on the welcome page" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed margins on the welcome page" />
+    <MESSAGE value="made contact list responsive. Added in example form" />
+    <MESSAGE value="successfully made AJAX call from form." />
+    <option name="LAST_COMMIT_MESSAGE" value="successfully made AJAX call from form." />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/views/navigation.php">
@@ -569,13 +598,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/navigation.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="322">
-          <caret line="14" column="6" selection-start-line="14" selection-start-column="6" selection-end-line="14" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/assets/js/main.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -586,10 +608,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/assets/js/jquery.js">
+    <entry file="file://$PROJECT_DIR$/bin/config.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="276">
-          <caret line="12" column="22" lean-forward="true" selection-start-line="12" selection-start-column="22" selection-end-line="12" selection-end-column="22" />
+        <state relative-caret-position="437">
+          <caret line="19" column="2" lean-forward="true" selection-start-line="19" selection-start-column="2" selection-end-line="19" selection-end-column="2" />
         </state>
       </provider>
     </entry>
@@ -600,24 +622,48 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bin/config.php">
+    <entry file="file://$PROJECT_DIR$/assets/js/jquery.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="437">
-          <caret line="19" column="2" lean-forward="true" selection-start-line="19" selection-start-column="2" selection-end-line="19" selection-end-column="2" />
+        <state relative-caret-position="391">
+          <caret line="17" column="64" selection-start-line="17" selection-start-column="53" selection-end-line="17" selection-end-column="64" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/controllers/Contact.php">
+    <entry file="file://$PROJECT_DIR$/views/navigation.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="551">
-          <caret line="35" column="24" lean-forward="true" selection-start-line="35" selection-start-column="24" selection-end-line="35" selection-end-column="24" />
+        <state relative-caret-position="322">
+          <caret line="14" column="6" selection-start-line="14" selection-start-column="6" selection-end-line="14" selection-end-column="6" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/views/contact.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="2" column="43" selection-start-line="2" selection-start-column="43" selection-end-line="2" selection-end-column="43" />
+        <state relative-caret-position="115">
+          <caret line="71" lean-forward="true" selection-start-line="71" selection-end-line="71" />
+          <folding>
+            <element signature="n#ul#0;n#div#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controllers/Contact.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1034">
+          <caret line="77" column="5" lean-forward="true" selection-start-line="77" selection-start-column="5" selection-end-line="77" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/messageForm.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="38" lean-forward="true" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/formConfirmation.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="414">
+          <caret line="18" column="47" selection-start-line="18" selection-start-column="47" selection-end-line="18" selection-end-column="47" />
         </state>
       </provider>
     </entry>
