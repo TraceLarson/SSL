@@ -7,9 +7,26 @@
 		<ul class="navbar-nav">
 			<? foreach ($data['Menu'] as $item => $value): ?>
 			<li class="nav-item <? if(ltrim($value,'/') == $data['CurrentPage'] ){echo 'active';} ?>">
-				<a class="nav-link" href="<?echo $value?>"><?echo $item;?> <span class="sr-only">(current)</span></a>
+				<a class="nav-link" href="<?= $value?>"><?echo $item;?> <span class="sr-only">(current)</span></a>
 			</li>
 			<? endforeach;?>
 		</ul>
+		<span style="color: red"><?=@$_REQUEST["msg"] ? $_REQUEST["msg"] : '';?></span>
+		<? if(@$_SESSION["loggedin"] and @$_SESSION["loggedin"] == 1){?>
+			<form class="form-inline ml-auto">
+				<a class="btn-sm badge-light" href="/Profile"> Profile</a>
+				<a class="btn-sm badge-light" href="/Auth/logout"> Logout</a>
+			</form>
+		<? }else{?>
+			<form class="form-inline ml-auto" role="search" method="post" action="/Auth/login">
+				<div class="form-group">
+					<input type="text" class="form-control-sm" name="username" placeholder="Username">
+				</div>
+				<div class="form-group ">
+					<input type="text" class="form-control-sm" name="password" placeholder="Password">
+				</div>
+				<button type="submit" class="btn btn-sm btn-dark mb-3 mb-sm-0">Sign-In</button>
+			</form>
+		<? }?>
 	</div>
 </nav>
