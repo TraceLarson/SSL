@@ -2,85 +2,28 @@
 	<div class="ml-5 mr-5">
 		<H3>Drop Us a Line!</H3>
 		
-
-
-		<!--		In your form tags add the following input element:-->
-
-		<!--		<div>-->
-		<!---->
-		<!--			<label for="exampleInputEmail1">Enter Captcha </label>-->
-		<!---->
-		<!--			<input name="captcha" type="captcha" id="captcha"  placeholder="">-->
-		<!---->
-		<!--		</div>-->
-
-		<!--		In  your controller:-->
-
-		<!--		Change the method that is calling the form view and add-->
-
-		<!--		public function contact(){-->
-		<!---->
-		<!--		$this->getView("header", array("pagename"=>"contact"));-->
-		<!---->
-		<!--		$random = substr( md5(rand()), 0, 7);-->
-		<!---->
-		<!--		$this->getView("contact",array("cap"=>$random));-->
-		<!---->
-		<!--		}-->
-
-		<!--		In your controller change the method that is receiving the form values-->
-
-		<!--		public function contactRecv(){-->
-		<!---->
-		<!--		$this->getView("header");-->
-		<!---->
-		<!---->
-		<!---->
-		<!--		if(form post variable==session variable){-->
-		<!---->
-		<!--		if(!filter_var($_POST["email"],FILTER_VALIDATE_EMAIL)){-->
-		<!---->
-		<!--		echo "Email invalid";-->
-		<!---->
-		<!--		echo "<br><a href='/welcome/contact'>Click here to go back</a>";-->
-		<!---->
-		<!--		}else{-->
-		<!---->
-		<!--		echo "Email valid";-->
-		<!---->
-		<!--		}-->
-		<!---->
-		<!--		}else{-->
-		<!---->
-		<!--		echo "Invalid captcha";-->
-		<!---->
-		<!--		echo "<br><a href='/welcome/contact'>Click here to go back</a>";-->
-		<!---->
-		<!--		}-->
-		<!---->
-		<!--		}-->
 		<form action="/Contact/contactRecv" method="post">
 			<div class="form-group">
 				<label for="email">Email address</label>
 				<input type="email" class="form-control <? echo $data['email']; ?>" id="email" name="email"
 				       placeholder="name@example.com">
-				<? if ($data == null || $data['email'] == 'is-valid') {
-					echo '';
-				} else {
-					echo '<p class="alert alert-danger">Please Enter a valid email</p>';
-				};
-				?>
+<!--				--><?// if ($data == null || $data['email'] == 'is-valid') {
+//					echo '';
+//				} else {
+//					echo '<p class="alert alert-danger">Please Enter a valid email</p>';
+//				};
+//				?>
 			</div>
 
 			<div class="form-group">
 				<label for="username">Username</label>
 				<input type="text" class="form-control <? echo $data['username']; ?>" id="username" name="username">
-				<? if ($data == null || $data['username'] == 'is-valid') {
-					echo '';
-				} else {
-					echo '<p class="alert alert-danger">Please Enter a valid username</p>';
-				}
-				?>
+<!--				--><?// if ($data == null || $data['username'] == 'is-valid') {
+//					echo '';
+//				} else {
+//					echo '<p class="alert alert-danger">Please Enter a valid username</p>';
+//				}
+//				?>
 			</div>
 
 			<div class="form-group">
