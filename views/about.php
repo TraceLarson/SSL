@@ -51,6 +51,3 @@
 	</div>
 </div>
 
-<div class="progress">
-	<div class="progress-bar" role="progressbar" style="width: 0%; transition: width ease-in-out;" aria-valuenow="1" aria-valuemin="0" aria-valuemax="100"></div>
-</div>

@@ -6,7 +6,8 @@
 //			parent::__construct($urlPathParts, $config);
 //		}
 		public function __construct() {
-			if (@$_SESSION["loggedin"] and @$_SESSION["loggedin"] == 1){
+			
+			if (@$_SESSION["loggedin"] and (@$_SESSION["loggedin"] == 1 || @$_SESSION["loggedin"] == 2)){
 				// Loads index method
 			}else{
 				header("Location:/Welcome");
@@ -14,9 +15,9 @@
 		}
 		
 		public function index(){
-			$this->getView("header", array('pagename' => 'welcome'));
+			$this->getView("header");
 			$this->getMenu();
-			echo 'This is a protected controller';
+			$this->getView('profile',$this->loadProfile());
 			$this->getView('footer');
 		}
 		
@@ -32,6 +33,39 @@
 			];
 			
 			$this->getView('navigation', $data);
+		}
+		
+		public function loadProfile(){
+			$lines = file('assets/profiles.txt');
+			$profiles = [];
+			foreach ($lines as $line){
+				array_push($profiles,$line);
+			}
+			$currentProfile = explode("|",$profiles[@$_SESSION['loggedin'] - 1]);
+			return $currentProfile;
+			
+		}
+		
+		public function update(){
+			if($_FILES['img']['name'] !='' ){
+				$imageFileType = pathinfo('assets/'.$_FILES['img']['name'], PATHINFO_EXTENSION);
+				
+				if(file_exists('assets/'.$_FILES['img']['name']) ){
+					echo 'Sorry, File Exists';
+				}else{
+					if($imageFileType != 'jpg' and $imageFileType != 'png'){
+						echo 'Sorry, This file type is not allowed';
+					}else{
+						if(move_uploaded_file($_FILES['img']['tmp_name'], "assets/".$_FILES["img"]["name"])){
+							echo 'file uploaded';
+						}else{
+							echo 'error uploading';
+						}
+					}
+				}
+				
+			}
+			header('Location:/Profile?msg=File Uploaded');
 		}
 		
 		

@@ -14,7 +14,13 @@
 					$_SESSION["loggedin"] = 1;
 					header("Location:/Welcome");
 				
-				} else {
+				}elseif ($_REQUEST["username"] == "Joe@aol.com" and $_REQUEST["password"] == "password"){
+					
+					$_SESSION["loggedin"] = 2;
+					
+					header("Location:/Welcome");
+					
+				}else {
 					header("Location:/Welcome?msg=Bad Login");
 				}
 			}else{
