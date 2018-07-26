@@ -15,13 +15,13 @@
 		}
 		
 		public function add($sql, $value=array()){
-			
 			$this->sql = $this->db->prepare($sql);
 			$result = $this->sql->execute($value);
-			
 		}
-		
-		public function delete(){}
+		public function delete($sql, $value=array()){
+			$this->sql = $this->db->prepare($sql);
+			$result = $this->sql->execute($value);
+		}
 		public function update($sql, $value=array()){
 			$this->sql = $this->db->prepare($sql);
 			$result = $this->sql->execute($value);

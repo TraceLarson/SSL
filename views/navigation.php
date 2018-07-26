@@ -10,6 +10,9 @@
 				<a class="nav-link" href="<?= $value?>"><?echo $item;?> <span class="sr-only">(current)</span></a>
 			</li>
 			<? endforeach;?>
+            <li class="nav-item">
+                <a class="nav-link" style="color: green" href="/Register">REGISTER!</a>
+            </li>
 		</ul>
 		<span style="color: red"><?=@$_REQUEST["msg"] ? $_REQUEST["msg"] : '';?></span>
 		<? if(@$_SESSION["loggedin"] and @$_SESSION["loggedin"] == 1 /*|| @$_SESSION["loggedin"] == 2 )*/){?>

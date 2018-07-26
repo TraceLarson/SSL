@@ -1,12 +1,8 @@
 <?php
 	class About extends AppController{
-
-//		public function __construct($urlPathParts, $config) {
-//			parent::__construct($urlPathParts, $config);
-//		}
+		
 		public function __construct($parent) {
 			$this->parent = $parent;
-//			$this->showList();
 		
 		}
 		

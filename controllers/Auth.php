@@ -16,12 +16,12 @@
 				$data = $this->parent->getModel("users")->select(
 					"SELECT * FROM users WHERE email = :email AND password = :password",
 					array(":email"=>$_REQUEST["username"],":password"=>sha1($_REQUEST["password"]))
-//					"SELECT * FROM users WHERE email = :email",
-//					array(":email"=>$_REQUEST["username"])
 				);
 				
 				if($data){
 					$_SESSION["loggedin"] = 1;
+					$_SESSION["data"] = $data[0];
+//					var_dump($_SESSION["data"]);
 					header("Location:/Welcome");
 				}else{
 					header("Location:/Welcome?msg=bad login db");

@@ -7,7 +7,6 @@
 		}
 		
 		public function select($sql, $value=array()){
-			
 			$this->sql = $this->db->prepare($sql);
 			$result = $this->sql->execute($value);
 			$data = $this->sql->fetchAll();
@@ -15,12 +14,15 @@
 		}
 		
 		public function add($sql, $value=array()){
-			
 			$this->sql = $this->db->prepare($sql);
-			$result = $this->db->execute($value);
-			
+			$result = $this->sql->execute($value);
 		}
-		
-		public function delete(){}
-		public function update(){}
+		public function delete($sql, $value=array()){
+			$this->sql = $this->db->prepare($sql);
+			$result = $this->sql->execute($value);
+		}
+		public function update($sql, $value=array()){
+			$this->sql = $this->db->prepare($sql);
+			$result = $this->sql->execute($value);
+		}
 	}
