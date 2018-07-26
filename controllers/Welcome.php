@@ -20,7 +20,8 @@
 			$menu = [
 				'Home' => '/Welcome',
 				'About' => '/About',
-				'Contact' => '/Contact'
+				'Contact' => '/Contact',
+				'Api' => '/Api'
 			];
 			$data = [
 				'CurrentPage' => 'Welcome',

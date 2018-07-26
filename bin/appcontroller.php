@@ -2,6 +2,7 @@
 	session_start();
 	class AppController{
 		public function __construct($urlPathParts, $config) {
+
 			
 			// db information
 			$this->db = new PDO("mysql:dbname=".$config["dbname"].";", $config["dbuser"], $config["dbpass"]);

@@ -8,9 +8,10 @@
 		
 		public function getMenu(){
 			$menu = [
-				'Home' => '/Welcome' ,
+				'Home' => '/Welcome',
 				'About' => '/About',
-				'Contact' => '/Contact'
+				'Contact' => '/Contact',
+				'Api' => '/Api'
 			];
 			$data = [
 				'CurrentPage' => 'About',

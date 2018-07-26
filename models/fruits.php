@@ -1,9 +1,10 @@
 <?php
+	# Google api key
+	//AIzaSyD_rnXZdOy-HGk2-hPhkIeDJPanqU7yT8Q
 	
 	class fruits{
 		public function __construct($parent){
 			$this->db = $parent->db;
-			
 		}
 		
 		public function select($sql, $value=array()){
