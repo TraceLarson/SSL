@@ -2,36 +2,35 @@
 	
 	class Auth extends AppController {
 		
-		public function __construct() {
-		
+		public function __construct($parent){
+			$this->parent = $parent;
 		}
 		
-		public function login() {
-			if ($_REQUEST["username"] and $_REQUEST["password"]) {
+		// 8cb2237d0679ca88db6464eac60da96345513964
+		// 8cb2237d0679ca88db6464eac60da96345513964
+		
+		public function login(){
+			
+			if($_REQUEST["username"] and $_REQUEST["password"]){
 				
-				$lines = file('assets/profiles.txt');
-				$profiles = [];
-				foreach ($lines as $line){
-					array_push($profiles,explode("|",$line));
-				}
+				$data = $this->parent->getModel("users")->select(
+					"SELECT * FROM users WHERE email = :email AND password = :password",
+					array(":email"=>$_REQUEST["username"],":password"=>sha1($_REQUEST["password"]))
+//					"SELECT * FROM users WHERE email = :email",
+//					array(":email"=>$_REQUEST["username"])
+				);
 				
-				if ($_REQUEST["username"] == $profiles[0][0] and $_REQUEST["password"] == $profiles[0][1]) {
-					
+				if($data){
 					$_SESSION["loggedin"] = 1;
 					header("Location:/Welcome");
-					
-				}elseif ($_REQUEST["username"] == $profiles[1][0] and $_REQUEST["password"] == $profiles[1][1]){
-					
-					$_SESSION["loggedin"] = 2;
-					header("Location:/Welcome");
-					
-				} else {
-					header("Location:/Welcome?msg=Bad Login");
+				}else{
+					header("Location:/Welcome?msg=bad login db");
 				}
-			}else{
-				header("Location:/Welcome?msg=Bad Login");
+				
 			}
+			
 		}
+		
 		
 		public function logout(){
 			session_destroy();
@@ -52,3 +51,35 @@
 	//					header("Location:/Welcome");
 	//
 	//				}
+	
+	
+//	public function __construct() {
+//
+//}
+//
+//	public function login() {
+//	if ($_REQUEST["username"] and $_REQUEST["password"]) {
+//
+//		$lines = file('assets/profiles.txt');
+//		$profiles = [];
+//		foreach ($lines as $line){
+//			array_push($profiles,explode("|",$line));
+//		}
+//
+//		if ($_REQUEST["username"] == $profiles[0][0] and $_REQUEST["password"] == $profiles[0][1]) {
+//
+//			$_SESSION["loggedin"] = 1;
+//			header("Location:/Welcome");
+//
+//		}elseif ($_REQUEST["username"] == $profiles[1][0] and $_REQUEST["password"] == $profiles[1][1]){
+//
+//			$_SESSION["loggedin"] = 2;
+//			header("Location:/Welcome");
+//
+//		} else {
+//			header("Location:/Welcome?msg=Bad Login");
+//		}
+//	}else{
+//		header("Location:/Welcome?msg=Bad Login");
+//	}
+//}

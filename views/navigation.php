@@ -12,7 +12,7 @@
 			<? endforeach;?>
 		</ul>
 		<span style="color: red"><?=@$_REQUEST["msg"] ? $_REQUEST["msg"] : '';?></span>
-		<? if(@$_SESSION["loggedin"] and (@$_SESSION["loggedin"] == 1 || @$_SESSION["loggedin"] == 2 )){?>
+		<? if(@$_SESSION["loggedin"] and @$_SESSION["loggedin"] == 1 /*|| @$_SESSION["loggedin"] == 2 )*/){?>
 			<form class="form-inline ml-auto">
 				<a class="btn-sm badge-light" href="/Profile"> Profile</a>
 				<a class="btn-sm badge-light" href="/Auth/logout"> Logout</a>

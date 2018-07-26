@@ -4,7 +4,7 @@
 		public function __construct($urlPathParts, $config) {
 			
 			// db information
-			
+			$this->db = new PDO("mysql:dbname=".$config["dbname"].";", $config["dbuser"], $config["dbpass"]);
 			$this->urlPathParts = $urlPathParts;
 			
 			// http://127.0.0.1/welcome

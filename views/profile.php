@@ -8,10 +8,16 @@
 			<input type="submit" value="Update" class="btn btn-primary">
 		</form>
 		<div>
-			<h1><?= $data[0]?></h1>
-			<h4>Student</h4>
-			<p><span><B>ABOUT:</B><?=$data[2]?></span></p>
+            <h1>NAME</h1>
+            <h4>Student</h4>
+            <p>
+                <span><B>ABOUT:</B></span>
+            </p>
 			
 		</div>
 	</div>
 </div>
+
+<!--<h1>--><?//= $data[0]?><!--</h1>-->
+<!--<h4>Student</h4>-->
+<!--<p><span><B>ABOUT:</B>--><?//=$data[2]?><!--</span></p>-->
