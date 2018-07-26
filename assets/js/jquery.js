@@ -20,6 +20,7 @@ $(document).ready(function () {
     });
 
 
+
     // ANIMATIONS!!!!!!!!!
     $(function () {
         $('[data-toggle="tooltip"]').tooltip()

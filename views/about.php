@@ -1,7 +1,7 @@
-<div class="content-container d-none">
+<div class="container content-container d-none">
 <!--    <a href="/About/showAddForm">Add New</a><br>-->
     <div class="Starter Template">
-        <h1>Bootstrap starter template</h1>
+        <h1>Fruits</h1>
         <p><a href="/About/showAddForm">Add New</a></p>
 	    <?
 		    foreach ($data as $fruit){

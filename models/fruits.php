@@ -22,5 +22,8 @@
 		}
 		
 		public function delete(){}
-		public function update(){}
+		public function update($sql, $value=array()){
+			$this->sql = $this->db->prepare($sql);
+			$result = $this->sql->execute($value);
+		}
 	}
