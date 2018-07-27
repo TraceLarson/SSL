@@ -133,8 +133,8 @@
     <servers />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="758" />
-    <option name="y" value="23" />
+    <option name="x" value="1333" />
+    <option name="y" value="32" />
     <option name="width" value="1162" />
     <option name="height" value="1115" />
   </component>
@@ -156,11 +156,6 @@
               <item name="myframework" type="b2602c69:ProjectViewProjectNode" />
               <item name="myframework" type="462c0819:PsiDirectoryNode" />
               <item name="bin" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="myframework" type="b2602c69:ProjectViewProjectNode" />
-              <item name="myframework" type="462c0819:PsiDirectoryNode" />
-              <item name="controllers" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -220,7 +215,7 @@
       <workItem from="1532132837272" duration="7057000" />
       <workItem from="1532392835280" duration="6393000" />
       <workItem from="1532555130203" duration="28514000" />
-      <workItem from="1532622481308" duration="5596000" />
+      <workItem from="1532622481308" duration="6230000" />
     </task>
     <task id="LOCAL-00001" summary="added animated progress bar, controller for about and contact pages, added views for about and contact, added php script to highlight the active page.">
       <created>1531762332345</created>
@@ -327,15 +322,21 @@
       <option name="project" value="LOCAL" />
       <updated>1532630319897</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="integrated google books api to the api controller, model, and view. Displays books by Thoreau. added google api library.">
+      <created>1532718247009</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1532718247009</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="108769000" />
+    <option name="totallyTimeSpent" value="109403000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="758" y="23" width="1162" height="1115" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20892857" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -365,7 +366,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <MESSAGE value="added animated progress bar, controller for about and contact pages, added views for about and contact, added php script to highlight the active page." />
     <MESSAGE value="Implemented Jumbotron and buttons with modal boxes for the Welcome page. Implemented Carousel with jumbotrons inside instead of images on the About page. Implemented a boostrap list with buttons that have functioning popovers for the contact information on the Contact page." />
     <MESSAGE value="fixed margins on the welcome page" />
