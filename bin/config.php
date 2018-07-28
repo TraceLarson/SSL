@@ -1,4 +1,5 @@
 <?php
+	
 	$config = array(
 		'defaultController' => 'welcome',
 		'dbname' => 'fruits',

@@ -10,7 +10,7 @@
 				<a class="nav-link" href="<?= $value?>"><?echo $item;?> <span class="sr-only">(current)</span></a>
 			</li>
 			<? endforeach;?>
-            <li class="nav-item">
+            <li class="nav-item <?if(@$_SESSION and @$_SESSION["loggedin"] == 1){echo 'd-none';}else{echo '';}?>">
                 <a class="nav-link" style="color: green" href="/Register">REGISTER!</a>
             </li>
 		</ul>

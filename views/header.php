@@ -5,6 +5,9 @@
 <!doctype html>
 <html lang="en">
 <head>
+	<!-- HTTPS required. HTTP will give a 403 forbidden response -->
+	<script src="https://sdk.accountkit.com/en_US/sdk.js"></script>
+	
 	<link type="text/css" rel="stylesheet" href="/assets/css/bootstrap.min.css"/>
 	<link type="text/css" rel="stylesheet" href="/assets/css/style.css"/>
 

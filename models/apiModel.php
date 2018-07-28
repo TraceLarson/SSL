@@ -1,15 +1,15 @@
 <?php
 	
-	class apiModel{
-		public function __construct($parent){
+	class apiModel {
+		public function __construct($parent) {
 			$this->db = $parent->db;
+			require_once('vendor/google/vendor/autoload.php');
+			require_once('vendor/autoload.php');
+			
 		}
 		
-		public function googleBooks($term=''){
+		public function googleBooks($term = '') {
 			
-			if(!class_exists('Google_Client')){
-				require_once('google-api-php-client-2.2.2/vendor/autoload.php');
-			}
 			$client = new Google_Client();
 			$client->setApplicationName("sslapi");
 			$client->setDeveloperKey('AIzaSyAW6wwsYnZwt4Q_HqMhiJRoOcwozrq7Y0U');
@@ -22,8 +22,6 @@
 			return $result;
 		}
 		
-		public function facebook(){
 		
-		}
 		
 	}

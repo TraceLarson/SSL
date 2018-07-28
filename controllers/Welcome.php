@@ -21,7 +21,8 @@
 				'Home' => '/Welcome',
 				'About' => '/About',
 				'Contact' => '/Contact',
-				'Api' => '/Api'
+				'BooksApi' => '/Api',
+				'Facebook' => '/Facebook'
 			];
 			$data = [
 				'CurrentPage' => 'Welcome',

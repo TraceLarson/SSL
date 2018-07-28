@@ -4,14 +4,15 @@
 		
 		public function __construct($parent) {
 			$this->parent = $parent;
-			$this->showApi();
+			require_once('vendor/autoload.php');
+//			$this->showBooksApi();
 		}
 		
-		public function showApi(){
+		public function index(){
 			$this->getView('header');
 			$this->getMenu();
-			$data = $this->parent->getModel('apiModel')->googleBooks("Henry David Thoreau");
-			$this->getView('api', $data);
+			$booksData = $this->parent->getModel('apiModel')->googleBooks("Henry David Thoreau");
+			$this->getView('booksApi', $booksData);
 			$this->getView('footer');
 		}
 		
@@ -20,7 +21,8 @@
 				'Home' => '/Welcome',
 				'About' => '/About',
 				'Contact' => '/Contact',
-				'Api' => '/Api'
+				'BooksApi' => '/Api',
+				'Facebook' => '/Facebook'
 			];
 			$data = [
 				'CurrentPage' => 'Api',
@@ -29,4 +31,7 @@
 			
 			$this->getView('navigation', $data);
 		}
+		
+		
+		
 	}

@@ -10,15 +10,14 @@ $(document).ready(function () {
             },
             success: function (msg) { // THis is what will be returned.
                 if (msg == "welcome") {
-                    alert("welcome " + $("#username").val() );
+                    alert("welcome " + $("#username").val());
                     window.location.href = "/Welcome";
-                }else{
+                } else {
                     alert('Bad Login');
                 }
             }
         })
     });
-
 
 
     // ANIMATIONS!!!!!!!!!
@@ -46,5 +45,74 @@ $(document).ready(function () {
         interval: 5000
     });
 
+
+
+    // FB SCRIPTS
+
+    $app_id = '338414790032228';
+    $secret = 'ab66a4d3782a6650cb788bdbe44379bb';
+    $version = 'v1.1'; // 'v1.1' for example
+    // initialize Account Kit with CSRF protection
+    AccountKit_OnInteractive = function () {
+        AccountKit.init(
+            {
+                appId: "338414790032228",
+                state: "csrf",
+                version: "v1.1",
+                fbAppEventsEnabled: true,
+                debug: true,
+                redirect: "/Api/facebook"
+            }
+        );
+    };
+
+    // login callback
+    function loginCallback(response) {
+        if (response.status === "PARTIALLY_AUTHENTICATED") {
+            var code = response.code;
+            var csrf = response.state;
+            // Send code to server to exchange for access token
+        }
+        else if (response.status === "NOT_AUTHENTICATED") {
+            // handle authentication failure
+            alert('Auth Failure');
+        }
+        else if (response.status === "BAD_PARAMS") {
+            // handle bad parameters
+            alert('Bad Params');
+        }
+    }
+
+    // phone form submission handler
+    function smsLogin() {
+        var countryCode = document.getElementById("country_code").value;
+        var phoneNumber = document.getElementById("phone_number").value;
+        AccountKit.login(
+            'PHONE',
+            {countryCode: countryCode, phoneNumber: phoneNumber}, // will use default values if not specified
+            loginCallback
+        );
+    }
+
+
+    // email form submission handler
+    function emailLogin() {
+        var emailAddress = document.getElementById("email").value;
+        AccountKit.login(
+            'EMAIL',
+            {emailAddress: emailAddress},
+            loginCallback
+        );
+    }
+
+    function loginCallback(response) {
+        if (response.status === "PARTIALLY_AUTHENTICATED") {
+            document.getElementById("code").value = response.code;
+            document.getElementById("csrf").value = response.state;
+            document.getElementById("login_success").submit();
+        }
+    }
+
 });
+
 
